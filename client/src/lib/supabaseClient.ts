@@ -47,18 +47,18 @@ export const createContactMessage = async (data: {
 
 // Course Applications
 export const createCourseApplication = async (data: {
-  full_name: string;
+  name: string;
   email: string;
   phone: string;
-  course_name: string;
+  course: string;
   experience_level: string;
   interest_message: string;
 }): Promise<CourseApplication> => {
   const applicationData: CourseApplicationInsert = {
-    full_name: data.full_name,
+    name: data.name,
     email: data.email,
     phone: data.phone,
-    course_name: data.course_name,
+    course: data.course,
     experience_level: data.experience_level,
     interest_message: data.interest_message
   };
