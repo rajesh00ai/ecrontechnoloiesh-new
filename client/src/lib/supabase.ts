@@ -44,35 +44,32 @@ export type Database = {
       course_applications: {
         Row: {
           id: string
-          name: string
+          full_name: string
           email: string
           phone: string
-          course: string
+          course_name: string
           experience_level: string
-          start_date: string | null
-          additional_info: string | null
+          interest_message: string
           created_at: string | null
         }
         Insert: {
           id?: string
-          name: string
+          full_name: string
           email: string
           phone: string
-          course: string
+          course_name: string
           experience_level: string
-          start_date?: string | null
-          additional_info?: string | null
+          interest_message: string
           created_at?: string | null
         }
         Update: {
           id?: string
-          name?: string
+          full_name?: string
           email?: string
           phone?: string
-          course?: string
+          course_name?: string
           experience_level?: string
-          start_date?: string | null
-          additional_info?: string | null
+          interest_message?: string
           created_at?: string | null
         }
       }
