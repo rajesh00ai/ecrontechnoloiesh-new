@@ -47,12 +47,13 @@ export const createContactMessage = async (data: {
 
 // Course Applications
 export const createCourseApplication = async (data: {
-  full_name: string;
+  name: string;
   email: string;
   phone: string;
-  course_name: string;
+  course: string;
   experience_level: string;
-  interest_message: string;
+  start_date?: string;
+  additional_info?: string;
 }): Promise<CourseApplication> => {
   const applicationData: CourseApplicationInsert = {
     full_name: data.full_name,
@@ -60,7 +61,8 @@ export const createCourseApplication = async (data: {
     phone: data.phone,
     course_name: data.course_name,
     experience_level: data.experience_level,
-    interest_message: data.interest_message
+    start_date: data.start_date || null,
+    additional_info: data.additional_info || null
   };
 
   const { data: result, error } = await supabase

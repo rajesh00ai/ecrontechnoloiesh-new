@@ -394,12 +394,12 @@ const CourseDetailPage: React.FC<CourseDetailPageProps> = ({ courseId, onBack })
 
     try {
       await createCourseApplication({
-        full_name: formData.fullName,
+        name: formData.fullName,
         email: formData.email,
         phone: formData.phone,
-        course_name: course.title,
+        course: course.title,
         experience_level: formData.experienceLevel,
-        interest_message: formData.interestMessage
+        additional_info: formData.interestMessage
       });
 
       setSubmitStatus('success');
